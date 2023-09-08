@@ -7,6 +7,14 @@ const messages = [
 export default function App() {
   const step = 1
 
+  function handlePrevious() {
+    alert('Previous')
+  }
+
+  function handleNext() {
+    alert('Next')
+  }
+
   return (
     <div className="steps">
       <div className="numbers">
@@ -20,10 +28,16 @@ export default function App() {
       </p>
 
       <div className="buttons">
-        <button style={{ backgroundColor: '#7950f2', color: '#fff' }}>
+        <button
+          style={{ backgroundColor: '#7950f2', color: '#fff' }}
+          onClick={handlePrevious} //In this case we dont call the function with () because it will cause to the function get run when the component is loaded
+        >
           Previous
         </button>
-        <button style={{ backgroundColor: '#7950f2', color: '#fff' }}>
+        <button
+          style={{ backgroundColor: '#7950f2', color: '#fff' }}
+          onClick={handleNext} //In this case we dont call the function with () because it will cause to the function get run when the component is loaded
+        >
           Next
         </button>
       </div>
